@@ -6,10 +6,11 @@
 </head>
 <body>
     <h1>Todo List</h1>
-
+    <a href="/task/add">+ Add new task</a>
+    
     <div class="tasks">
         {% for task in tasks %}
-            <div class="task" style="border: 1px solid black; width: 200px; padding: 5px; margin-bottom: 10px">
+            <div class="task" style="border: 1px solid black; width: 200px; padding: 5px; margin: 10px">
                 <p>Title: {{ task.title }}</p>
                 <p>Status: {{ task.status }}</p>
                 <p>Deadline: {{ task.deadline }}</p>
