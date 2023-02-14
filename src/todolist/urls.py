@@ -4,4 +4,5 @@ from todolist.views import *
 
 urlpatterns = [
     path('', index),
+    path('task/', view_task)
 ]
