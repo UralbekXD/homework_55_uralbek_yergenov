@@ -22,6 +22,10 @@
                 <option value="{{ status.0 }}">{{ status.1 }}</option>
             {% endfor %}
         </select>
+
+        <label for="deadline">Deadline: </label>
+        <input type="date" id="deadline" name="deadline" min="{{ time_now }}">
+
         <br>
         <button type="submit">Create</button>
     </form>

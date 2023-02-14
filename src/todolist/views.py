@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from datetime import datetime
 from todolist.models import Task
 
 
@@ -28,6 +28,7 @@ def create_task(request):
         case 'GET':
             context = {
                 'status_choices': Task.STATUS_CHOICES,
+                'time_now': datetime.today().strftime('%Y-%m-%d'),
             }
             return render(request, 'create.html', context=context)
         case 'POST':
