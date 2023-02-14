@@ -11,3 +11,14 @@ def index(request):
     }
 
     return render(request, 'index.html', context=context)
+
+
+def view_task(request):
+    pk = request.GET.get('pk')
+    task = Task.objects.get(pk=pk)
+    context = {
+        'task': task
+    }
+
+    return render(request, 'task.html', context=context)
+
