@@ -1,0 +1,80 @@
+[
+{
+  "model": "todolist.task",
+  "pk": 1,
+  "fields": {
+    "title": "test",
+    "description": "test",
+    "status": "new",
+    "deadline": "2023-02-14"
+  }
+},
+{
+  "model": "todolist.task",
+  "pk": 2,
+  "fields": {
+    "title": "some title",
+    "description": "some description",
+    "status": "in progress",
+    "deadline": "2023-07-30"
+  }
+},
+{
+  "model": "todolist.task",
+  "pk": 3,
+  "fields": {
+    "title": "test",
+    "description": "test",
+    "status": "Новый",
+    "deadline": null
+  }
+},
+{
+  "model": "todolist.task",
+  "pk": 4,
+  "fields": {
+    "title": "test",
+    "description": "test",
+    "status": "Новый",
+    "deadline": null
+  }
+},
+{
+  "model": "todolist.task",
+  "pk": 5,
+  "fields": {
+    "title": "a",
+    "description": "a",
+    "status": "in progress",
+    "deadline": "2023-02-14"
+  }
+},
+{
+  "model": "todolist.task",
+  "pk": 6,
+  "fields": {
+    "title": "b",
+    "description": "b",
+    "status": "in progress",
+    "deadline": "2023-02-25"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$znq1q0u4QrLkZzLj98h5ck$x7cyx2cNNnAL1QUKNUlyJ6EYtYeGrFKcaV7WET0whhc=",
+    "last_login": "2023-02-14T10:43:02.712Z",
+    "is_superuser": true,
+    "username": "ural",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-14T10:42:41.685Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
