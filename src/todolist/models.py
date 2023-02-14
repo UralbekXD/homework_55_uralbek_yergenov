@@ -26,4 +26,4 @@ class Task(models.Model):
     deadline = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f'{self.title} {self.status} {self.deadline}'
+        return f'{self.pk} {self.title} {self.status} {self.deadline}'
