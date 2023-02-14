@@ -1,0 +1,12 @@
+.title {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.tasks {
+    margin-top: 5rem;
+}
+
+.task {
+    padding: 0;
+}
