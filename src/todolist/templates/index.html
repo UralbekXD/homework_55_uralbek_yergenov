@@ -13,6 +13,7 @@
                 <p>Title: {{ task.title }}</p>
                 <p>Status: {{ task.status }}</p>
                 <p>Deadline: {{ task.deadline }}</p>
+                <a href="/task/?pk={{ task.pk }}">See</a>
             </div>
         {% endfor %}
     </div>
