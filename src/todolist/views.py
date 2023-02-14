@@ -10,4 +10,4 @@ def index(request):
         'tasks': tasks
     }
 
-    return render(request, 'index.html', context=tasks)
+    return render(request, 'index.html', context=context)
