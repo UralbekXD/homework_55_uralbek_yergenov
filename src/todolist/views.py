@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from datetime import datetime
 from todolist.models import Task
 
@@ -13,14 +13,11 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 
-def view_task(request):
-    pk = request.GET.get('pk')
-    task = Task.objects.get(pk=pk)
-    context = {
+def view_task(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    return render(request, 'task.html', context={
         'task': task
-    }
-
-    return render(request, 'task.html', context=context)
+    })
 
 
 def create_task(request):
@@ -46,4 +43,4 @@ def create_task(request):
                 full_description=full_description,
             )
 
-            return redirect('/task/?pk={primary_key}'.format(primary_key=task.pk))
+            return redirect('task_view', pk=task.pk)

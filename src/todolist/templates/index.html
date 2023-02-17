@@ -12,7 +12,7 @@
     <div class="container">
         <div class="title">
             <h1>Todo List</h1>
-            <a href="/task/add" class="btn btn-primary btn-sm">New Task</a>
+            <a href="{% url 'task_create' %}" class="btn btn-primary btn-sm">New Task</a>
         </div>
 
 
@@ -25,7 +25,7 @@
                         <h5 class="card-title">Deadline: {{ task.deadline }}</h5>
                         <p class="card-text">Description: {{ task.description }}</p>
                     </div>
-                    <a href="/task/?pk={{ task.pk }}" class="btn btn-primary btn-sm">See</a>
+                    <a href="{% url 'task_view' task.pk %}" class="btn btn-primary btn-sm">See</a>
                 </div>
             {% endfor %}
         </div>

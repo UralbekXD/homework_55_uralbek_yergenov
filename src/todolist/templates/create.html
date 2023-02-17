@@ -8,21 +8,21 @@
 <body>
     <div class="title text-center my-5 ">
         <h1>Add new task</h1>
-        <a href="/" class="btn btn-primary btn-sm">Home</a>
+        <a href="{% url 'index' %}" class="btn btn-primary btn-sm">Home</a>
     </div>
 
     <div class="container col-md-8 col-lg-4 border rounded-1 p-3 mb-5">
-        <form action="" method="POST">
+        <form action="{% url 'task_create' %}" method="POST">
             {% csrf_token %}
 
             <div class="my-2">
                 <label for="title">Заголовок</label>
-                <input class="form-control" name="title" type="text" id="title" placeholder="Заголовок задачи">
+                <input class="form-control" name="title" type="text" id="title" placeholder="Заголовок задачи" required>
             </div>
 
             <div class="my-3">
                 <label for="description" class="form-label">Описание</label>
-                <textarea class="form-control" name="description" id="description" rows="3" placeholder="Описание"></textarea>
+                <textarea class="form-control" name="description" id="description" rows="3" placeholder="Описание" required></textarea>
             </div>
 
             <div class="my-3">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="my-3 mx-3">
                     <label for="deadline" class="form-label">Дата выполнения</label>
-                    <input type="date" name="deadline" id="deadline" class="form-control">
+                    <input type="date" name="deadline" id="deadline" class="form-control" required>
                 </div>
             </div>
 
