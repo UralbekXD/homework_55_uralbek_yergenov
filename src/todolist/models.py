@@ -4,7 +4,8 @@ from django.db import models
 # Create your models here.
 class Task(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False, verbose_name='Заголовок')
-    description = models.TextField(max_length=4096, null=False, blank=False, verbose_name='Описание')
+    description = models.CharField(max_length=128, null=False, blank=False, verbose_name='Описание')
+    full_description = models.TextField(max_length=4096, null=True, blank=True, verbose_name='Полное описание')
 
     NEW = 'new'
     IN_PROGRESS = 'in progress'
