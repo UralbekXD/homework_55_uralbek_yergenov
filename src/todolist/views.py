@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+
 from datetime import datetime
 from todolist.models import Task
 
@@ -43,4 +45,4 @@ def create_task(request):
                 full_description=full_description,
             )
 
-            return redirect('task_view', pk=task.pk)
+            return redirect(reverse('task_view', kwargs={'pk': task.pk}))
