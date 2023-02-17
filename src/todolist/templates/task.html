@@ -21,9 +21,9 @@
                 <h5 class="card-title">Status: {{ task.status }}</h5>
                 <h5 class="card-title">Deadline: {{ task.deadline }}</h5>
                 <label for="description" class="form-label">Description:</label>
-                <p class="card-text mx-3" id="description">
-                    {{ task.description }}
-                </p>
+                <p class="card-text mx-3" id="description">{{ task.description }}</p>
+                <label for="full_description" class="form-label">Full Description:</label>
+                <pre class="card-text mx-3" id="full_description">{{ task.full_description }}</pre>
             </div>
         </div>
     </div>

@@ -11,7 +11,7 @@
         <a href="/" class="btn btn-primary btn-sm">Home</a>
     </div>
 
-    <div class="container col-md-8 col-lg-4 border rounded-1 p-3">
+    <div class="container col-md-8 col-lg-4 border rounded-1 p-3 mb-5">
         <form action="" method="POST">
             {% csrf_token %}
 
@@ -23,6 +23,11 @@
             <div class="my-3">
                 <label for="description" class="form-label">Описание</label>
                 <textarea class="form-control" name="description" id="description" rows="3" placeholder="Описание"></textarea>
+            </div>
+
+            <div class="my-3">
+                <label for="full_description" class="form-label">Полное описание</label>
+                <textarea class="form-control" name="full_description" id="full_description" rows="15" placeholder="Полное описание"></textarea>
             </div>
 
             <div class="my-3 d-flex">

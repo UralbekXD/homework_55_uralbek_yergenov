@@ -36,12 +36,14 @@ def create_task(request):
             description = request.POST.get('description')
             status = request.POST.get('status')
             deadline = request.POST.get('deadline')
+            full_description = request.POST.get('full_description')
 
             task = Task.objects.create(
                 title=title,
                 description=description,
                 status=status,
                 deadline=deadline,
+                full_description=full_description,
             )
 
             return redirect('/task/?pk={primary_key}'.format(primary_key=task.pk))
