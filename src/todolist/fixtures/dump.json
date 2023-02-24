@@ -1,42 +1,24 @@
 [
 {
-  "model": "todolist.task",
-  "pk": 11,
-  "fields": {
-    "title": "test",
-    "description": "basic description",
-    "full_description": "Full Description lorem ipsum test test test",
-    "status": "in progress",
-    "deadline": "2023-02-18"
-  }
+    "model": "todolist.task",
+    "pk": 18,
+    "fields": {
+        "title": "test",
+        "description": "some description",
+        "full_description": "aaaaa\r\naa\r\naaaaa",
+        "status": "in progress",
+        "deadline": "2023-02-26"
+    }
 },
 {
-  "model": "todolist.task",
-  "pk": 12,
-  "fields": {
-    "title": "test2",
-    "description": "test2 description",
-    "full_description": "apple juice, orange juice",
-    "status": "new",
-    "deadline": "2023-02-17"
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$390000$znq1q0u4QrLkZzLj98h5ck$x7cyx2cNNnAL1QUKNUlyJ6EYtYeGrFKcaV7WET0whhc=",
-    "last_login": "2023-02-17T07:10:49.322Z",
-    "is_superuser": true,
-    "username": "ural",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-02-14T10:42:41.685Z",
-    "groups": [],
-    "user_permissions": []
-  }
+    "model": "todolist.task",
+    "pk": 19,
+    "fields": {
+        "title": "test2",
+        "description": "another descr",
+        "full_description": "a a a a a a\r\n a a a a a\r\na a a a a a",
+        "status": "in progress",
+        "deadline": "2023-02-24"
+    }
 }
 ]
