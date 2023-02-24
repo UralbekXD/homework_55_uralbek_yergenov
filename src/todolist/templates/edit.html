@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Task
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'task_update' pk %}" method="POST" class="mt-5">
+        {% include 'partial/task_form.html' with button_color='warning' button_text='Edit Task'%}
+    </form>
+{% endblock %}

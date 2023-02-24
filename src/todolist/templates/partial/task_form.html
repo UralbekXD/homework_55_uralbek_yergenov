@@ -1,0 +1,6 @@
+{% csrf_token %}
+{{ form.as_p }}
+
+<button type="submit" class="btn btn-sm btn-{{ button_color }}">
+    {{ button_text }}
+</button>
