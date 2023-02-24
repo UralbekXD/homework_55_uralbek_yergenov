@@ -72,6 +72,13 @@ def update_task(request, pk):
                     'form': form,
                 })
 
+            task.title = form.cleaned_data.get('title')
+            task.description = form.cleaned_data.get('description')
+            task.full_description = form.cleaned_data.get('full_description')
+            task.status = form.cleaned_data.get('status')
+            task.deadline = form.cleaned_data.get('deadline')
+            task.save()
+
             return redirect(reverse('task_view', kwargs={'pk': pk}))
 
 
