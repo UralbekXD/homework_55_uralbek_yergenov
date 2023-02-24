@@ -20,7 +20,41 @@
                     <h5 class="card-title">Deadline: {{ task.deadline }}</h5>
                     <p class="card-text">Description: {{ task.description }}</p>
                 </div>
-                <a href="{% url 'task_view' task.pk %}" class="btn btn-primary btn-sm">See</a>
+
+                <div class="btn-group">
+                    <a type="button" href="{% url 'task_view' task.pk %}" class="btn btn-sm btn-primary">Read</a>
+                    <a type="button" href="{% url 'task_update' task.pk %}" class="btn btn-sm btn-warning">Update</a>
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Delete
+                    </button>
+
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete {{ task.title }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">close</button>
+                                <form action="{% url 'task_delete' task.pk %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         {% endfor %}
     </div>

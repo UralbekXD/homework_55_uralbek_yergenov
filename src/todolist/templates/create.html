@@ -5,41 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <form action="{% url 'task_create' %}" method="POST">
-        {% csrf_token %}
-
-        <div class="my-2">
-            <label for="title">Заголовок</label>
-            <input class="form-control" name="title" type="text" id="title" placeholder="Заголовок задачи" required>
-        </div>
-
-        <div class="my-3">
-            <label for="description" class="form-label">Описание</label>
-            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Описание" required></textarea>
-        </div>
-
-        <div class="my-3">
-            <label for="full_description" class="form-label">Полное описание</label>
-            <textarea class="form-control" name="full_description" id="full_description" rows="15" placeholder="Полное описание"></textarea>
-        </div>
-
-        <div class="my-3 d-flex">
-            <div class="my-3">
-                <label for="status" class="form-label">Статус</label>
-                <select class="form-select" id="status" name="status">
-                    {% for status in status_choices %}
-                        <option value="{{ status.0 }}">{{ status.1 }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="my-3 mx-3">
-                <label for="deadline" class="form-label">Дата выполнения</label>
-                <input type="date" name="deadline" id="deadline" class="form-control" required>
-            </div>
-        </div>
-
-        <div class="my-3">
-            <button type="submit" class="btn btn-primary rounded-1">Create</button>
-        </div>
+    <form action="{% url 'task_create' %}" method="POST" class="mt-5">
+        {% include 'partial/task_form.html' with button_color='primary' button_text='Create Task'%}
     </form>
 {% endblock %}
